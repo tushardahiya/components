@@ -46,7 +46,6 @@ class App extends Component {
   render() {
 
     let persons = null;
-    let btnClass='';
 
     if (this.state.showPersons) {
       persons = (    
@@ -61,6 +60,7 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <Cockpit 
+        title={this.props.appTitle}
         persons={this.state.persons}
         showPersons={this.state.showPersons}
         clicked={this.togglePersonsHandler} />
